@@ -38,10 +38,10 @@ export default function RootLayout({
               <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
                 <div className="flex gap-5 items-center font-semibold">
                   <Image
-                    src="/twitter-image.png"
-                    alt="codecollab-logo"
-                    width={22}
-                    height={20}
+                    height={100}
+                    width={100}
+                    src={"/codecollab.png"}
+                    alt="logo"
                   />
                   CodeCollab
                 </div>
