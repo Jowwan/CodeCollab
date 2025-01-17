@@ -141,7 +141,7 @@ export const signInWithOAuthGithub = async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "github",
     options: {
-      redirectTo: `http://localhost:3000/auth/callback`,
+      redirectTo: `https://codecollab-jowan.vercel.app/auth/callback`,
     },
   });
 
@@ -158,7 +158,7 @@ export const signInWithOAuthDiscord = async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "discord",
     options: {
-      redirectTo: `http://localhost:3000/auth/callback`,
+      redirectTo: `https://codecollab-jowan.vercel.app/auth/callback`,
     },
   });
 
@@ -175,7 +175,7 @@ export const signInWithOAuthGoogle = async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `http://localhost:3000/auth/callback`,
+      redirectTo: `https://codecollab-jowan.vercel.app/auth/callback`,
     },
   });
 
