@@ -131,14 +131,49 @@ export const resetPasswordAction = async (formData: FormData) => {
 export const signOutAction = async () => {
   const supabase = await createClient();
   await supabase.auth.signOut();
+  console.log("jej");
   return redirect("/sign-in");
 };
 
-export const signInWithOAuth = async () => {
+export const signInWithOAuthGithub = async () => {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "github",
+    options: {
+      redirectTo: `http://localhost:3000/auth/callback`,
+    },
+  });
+
+  if (error) {
+    console.log(error);
+  } else {
+    redirect(data.url);
+  }
+};
+
+export const signInWithOAuthDiscord = async () => {
   const supabase = await createClient();
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "discord",
+    options: {
+      redirectTo: `http://localhost:3000/auth/callback`,
+    },
+  });
+
+  if (error) {
+    console.log(error);
+  } else {
+    redirect(data.url);
+  }
+};
+
+export const signInWithOAuthGoogle = async () => {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
     options: {
       redirectTo: `http://localhost:3000/auth/callback`,
     },
