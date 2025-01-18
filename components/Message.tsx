@@ -38,7 +38,7 @@ const Message = ({ user_id, text }: { user_id: string; text: string }) => {
         </div>
         <p className="text-white">{name}</p>
       </div>
-      <p className="text-gray-400 pl-10 pt-5 break-words w-80">{text}</p>
+      <p className="text-gray-400 pl-10 pt-5 text-wrap w-80">{text}</p>
     </div>
   );
 };

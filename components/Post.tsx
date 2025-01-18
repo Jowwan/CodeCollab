@@ -36,10 +36,10 @@ const Post = ({ post }: { post: PostType }) => {
 
   return (
     <div className="w-full bg-gradient-to-t rounded-3xl from-slate-800 to-slate-900 px-20 py-10 mb-20">
-      <p className="text-center text-3xl font-mono font-bold text-cyan-300 mb-20 border-b-2 border-cyan-300 pb-4 break-all">
+      <p className="text-center text-3xl font-mono font-bold text-cyan-300 mb-20 border-b-2 border-cyan-300 pb-4 text-wrap">
         {post.title}
       </p>
-      <p className="text-cyan-100 opacity-80 text-xl break-all mb-10">
+      <p className="text-cyan-100 opacity-80 text-xl text-wrap mb-10">
         {post.content}
       </p>
       <div className="flex justify-end items-center gap-6">

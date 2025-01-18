@@ -17,7 +17,7 @@ const SelfMessage = ({ user, text }: { user: User; text: string }) => {
           />
         </div>
       </div>
-      <p className="text-gray-400 pr-10 pt-5 break-words w-80 text-right">
+      <p className="text-gray-400 pr-10 pt-5 text-wrap w-80 text-right">
         {text}
       </p>
     </div>
